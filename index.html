@@ -244,6 +244,61 @@
   .info-card-link { font-size: 13px; color: #e8a83a; }
 
   .schedule { max-width: 540px; margin: 0 auto; }
+
+  .audience-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 32px;
+  }
+  .audience-links a {
+    flex: 1 1 200px;
+    max-width: 284px;
+    padding: 16px 12px;
+    border: 1px solid #e8a83a;
+    color: #e8a83a;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    transition: all 0.2s;
+  }
+  .audience-links a::after { content: " ↓"; }
+  .audience-links a:hover { background: #e8a83a; color: #1a0606; }
+  .sub-heading {
+    max-width: 600px;
+    margin: 48px auto 16px;
+    padding-bottom: 8px;
+    border-bottom: 0.5px solid #5a3a1a;
+    font-size: 16px;
+    letter-spacing: 0.3em;
+    color: #e8a83a;
+  }
+  .viewing-text {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 2;
+    color: #fde0a0;
+    letter-spacing: 0.03em;
+  }
+  .viewing-list {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 9.5em 1fr;
+    column-gap: 12px;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+  .viewing-list dt, .viewing-list dd {
+    padding: 10px 0;
+    border-bottom: 0.5px solid #3a1818;
+  }
+  .viewing-list dt { color: #e8a83a; letter-spacing: 0.1em; }
+  .viewing-list dd { margin: 0; color: #fde0a0; }
+  .route-note a { color: #e8a83a; }
   .schedule-row {
     display: flex;
     padding: 18px 0;
@@ -583,7 +638,8 @@
 <nav class="topnav">
   <ul>
     <li><a href="#info">開催情報</a></li>
-    <li><a href="#entry">申込</a></li>
+    <li><a href="#yokai">妖怪参加</a></li>
+    <li><a href="#viewing">観覧</a></li>
     <li><a href="#recruit">募集</a></li>
     <li><a href="#schedule">流れ</a></li>
     <li><a href="#map">会場</a></li>
@@ -653,7 +709,7 @@
   <div class="container">
     <div class="section-header">
       <div class="section-label">開催概要</div>
-      <div class="section-title">参加要項</div>
+      <div class="section-title">東京百鬼夜行2026</div>
     </div>
     <div class="info-grid">
       <div class="info-card info-card-wide">
@@ -665,19 +721,34 @@
         <div class="info-card-value">東京：高円寺ルック商店街<br><a href="https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E5%86%86%E5%AF%BA%E3%83%AB%E3%83%83%E3%82%AF%E5%95%86%E5%BA%97%E8%A1%97" target="_blank" rel="noopener" class="info-card-link">📍 Google マップ</a></div>
       </div>
       <div class="info-card">
-        <div class="info-card-label">受付</div>
-        <div class="info-card-value">Material<br><span class="info-card-note">（更衣室もこちらです）</span></div>
-      </div>
-      <div class="info-card">
         <div class="info-card-label">アクセス</div>
         <div class="info-card-value">JR高円寺駅から<br>新高円寺方面へ徒歩6分</div>
       </div>
       <div class="info-card">
         <div class="info-card-label">観覧</div>
-        <div class="info-card-value">無料</div>
+        <div class="info-card-value">無料<br><span class="info-card-note">申込不要</span></div>
+      </div>
+    </div>
+    <div class="audience-links">
+      <a href="#yokai">妖怪として参加する</a>
+      <a href="#viewing">一般観覧のご案内</a>
+    </div>
+  </div>
+</section>
+
+<section id="yokai">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">妖怪として参加する</div>
+      <div class="section-title">妖怪参加要項</div>
+    </div>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-card-label">受付</div>
+        <div class="info-card-value">Material<br><span class="info-card-note">（更衣室もこちらです）</span></div>
       </div>
       <div class="info-card">
-        <div class="info-card-label">妖怪参加</div>
+        <div class="info-card-label">参加費</div>
         <div class="info-card-value">大人 3,000円<br><span class="info-card-note">小学生以下 1,000円</span></div>
       </div>
       <div class="info-card info-card-wide">
@@ -685,9 +756,70 @@
         <div class="info-card-value">250名（残り7席）</div>
       </div>
     </div>
-    <p class="route-note">参加費はいずれも1名あたり・税込です。</p>
+    <p class="route-note">参加費はいずれも1名あたり・税込です。事前申込制です。<br>参加の前に<a href="#rules">妖怪変化規定</a>と<a href="#faq">妖怪参加者向けFAQ</a>をご確認ください。</p>
     <div class="cta-block" style="margin-top:28px;">
       <a class="cta-button" href="https://event.youkaiya.jp/#/events/evt_01KZD89ZXK330XY40N6GP10VTE" target="_blank" rel="noopener">参加申込はこちら</a>
+    </div>
+  </div>
+</section>
+
+<section id="viewing" class="section-dark">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">観覧する</div>
+      <div class="section-title">一般観覧のご案内</div>
+    </div>
+    <p class="lead-text" style="margin-bottom:40px;">
+      東京百鬼夜行は、どなたでも無料でご覧いただけます。<br>申込は不要です。
+    </p>
+
+    <div class="sub-heading">見どころ</div>
+    <div class="schedule">
+      <div class="schedule-row">
+        <div class="schedule-time">14:00</div>
+        <div class="schedule-text">撮影会<br><span class="schedule-note">クイーンズ伊勢丹前。行列の出発前に妖怪たちが集まります。間近で撮影できるチャンスです。</span></div>
+      </div>
+      <div class="schedule-row highlight">
+        <div class="schedule-time">14:30</div>
+        <div class="schedule-text">行列開始<br><span class="schedule-note">高円寺ルック商店街を百鬼の行列が練り歩きます（約1時間）。</span></div>
+      </div>
+      <div class="schedule-row highlight">
+        <div class="schedule-time">15:25</div>
+        <div class="schedule-text">フィナーレ<br><span class="schedule-note">高円寺駅北口 特設リング。龍宮の若による和太鼓演奏（15:25〜15:50）。大変混み合います。</span></div>
+      </div>
+      <div class="schedule-row">
+        <div class="schedule-time">〜18:00</div>
+        <div class="schedule-text">街歩き<br><span class="schedule-note">行列のあとも、街のあちこちで妖怪に出会えます。</span></div>
+      </div>
+    </div>
+
+    <div class="sub-heading">観覧のマナー</div>
+    <div class="rules">
+      <ul>
+        <li>行列の進路をふさがないよう、道の端からご覧ください。</li>
+        <li>妖怪に触れたり、衣装を引っ張ったりしないでください。</li>
+        <li>近くで撮影するときは、ひと声かけてからお願いします。</li>
+        <li>お店の前など、営業の妨げになる場所で立ち止まっての撮影はご遠慮ください。</li>
+        <li>誘導スタッフ（腕章をつけています）の案内に従ってください。</li>
+      </ul>
+    </div>
+
+    <div class="sub-heading">撮影・SNS</div>
+    <p class="viewing-text">
+      撮影は高円寺フェスの開催エリア全域でOKです。投稿の際はプライバシーにご配慮のうえ、「#東京百鬼夜行」「#高円寺ルック商店街」「#高円寺フェス」をつけていただけると嬉しいです。
+    </p>
+
+    <div class="sub-heading">その他</div>
+    <dl class="viewing-list">
+      <dt>交通規制</dt><dd>行列ルートは当日、交通規制が入ります。</dd>
+      <dt>雨天</dt><dd>小雨決行。荒天時は行列を中止する場合があります。</dd>
+      <dt>トイレ</dt><dd>ルック商店街の各所にあります。</dd>
+      <dt>体調不良・怪我</dt><dd>近くの誘導スタッフにお声がけください。</dd>
+    </dl>
+
+    <div class="cta-block" style="margin-top:40px;">
+      <p class="viewing-text" style="text-align:center;margin-bottom:20px;">見ているだけでは物足りなくなったら――</p>
+      <a class="cta-button cta-button-outline" href="#yokai">妖怪として参加する</a>
     </div>
   </div>
 </section>
@@ -821,6 +953,7 @@
       <div class="section-label">参加規定</div>
       <div class="section-title">妖怪変化規定</div>
     </div>
+    <p class="lead-text" style="margin-bottom:32px;">妖怪として参加される方にお守りいただく規定です。</p>
     <div class="rules">
       <ul>
         <li>貴重品（財布・カード・スマートフォンなど）の紛失・盗難に関しては当運営では一切の責任を負わないものとします。</li>
@@ -874,7 +1007,7 @@
       </details>
       <details>
         <summary>Q. 行列のゴールがわからないのですが？</summary>
-        <div class="answer">高円寺駅北口にプロレスの特設リングがあります。そちらで龍宮の若による和太鼓フィナーレを行います。大変人が混み合いますがそちらがゴールとなります。はぐれたり途中離脱した場合でもそちらに14時55分までにご集合いただければ一緒にフィナーレをむかえられます。</div>
+        <div class="answer">高円寺駅北口にプロレスの特設リングがあります。そちらで龍宮の若による和太鼓フィナーレを行います。大変人が混み合いますがそちらがゴールとなります。はぐれたり途中離脱した場合でもそちらに15時25分までにご集合いただければ一緒にフィナーレをむかえられます。</div>
       </details>
       <details>
         <summary>Q. フルフェイスや着ぐるみで歩行が困難でも大丈夫ですか？</summary>
