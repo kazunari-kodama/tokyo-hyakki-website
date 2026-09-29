@@ -430,6 +430,37 @@
     background: #fef3d4;
     color: #1a0606;
   }
+  .recruit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .recruit-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 0.5px solid #5a3a1a;
+    padding: 32px 20px;
+    background: rgba(232, 168, 58, 0.04);
+  }
+  .recruit-title {
+    font-size: 18px;
+    letter-spacing: 0.15em;
+    color: #fef3d4;
+    margin-bottom: 16px;
+  }
+  .recruit-desc {
+    flex: 1;
+    font-size: 13px;
+    line-height: 1.9;
+    letter-spacing: 0.05em;
+    color: #fde0a0;
+    margin-bottom: 24px;
+  }
+  .recruit-card .cta-button { padding: 14px 32px; font-size: 13px; letter-spacing: 0.2em; }
   .cta-button-outline {
     background: transparent;
     border: 1px solid #e8a83a;
@@ -535,7 +566,7 @@
   <ul>
     <li><a href="#info">開催情報</a></li>
     <li><a href="#entry">申込</a></li>
-    <li><a href="#vendor">出店</a></li>
+    <li><a href="#recruit">募集</a></li>
     <li><a href="#schedule">流れ</a></li>
     <li><a href="#map">会場</a></li>
     <li><a href="#partners">協力団体</a></li>
@@ -882,15 +913,32 @@
   </div>
 </section>
 
-<section id="vendor" class="section-dark">
-  <div class="container cta-block">
-    <div class="cta-label">出店募集</div>
-    <div class="cta-title">百鬼の市に、店を構えよ</div>
-    <p style="font-size:13px;color:#fde0a0;letter-spacing:0.1em;margin-bottom:32px;line-height:1.9;">
-      東京百鬼夜行2026では、当日に出店していただける方を募集しています。<br>
-      募集要項・お申込みは募集ページをご覧ください。
-    </p>
-    <a class="cta-button cta-button-outline" href="https://event.youkaiya.jp/#/yorozuya/r/rec_01M3BVEH0W0A04RYAYC2JY6R3B" target="_blank" rel="noopener">出店募集ページへ</a>
+<section id="recruit" class="section-dark">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">募集</div>
+      <div class="section-title">出店・スタッフ募集</div>
+    </div>
+    <div class="recruit-grid">
+      <div class="recruit-card">
+        <div class="cta-label">出店募集</div>
+        <div class="recruit-title">百鬼の市に、店を構えよ</div>
+        <p class="recruit-desc">
+          当日出店いただける方を募集中です。<br>
+          詳細・お申込みは募集ページへ。
+        </p>
+        <a class="cta-button cta-button-outline" href="https://event.youkaiya.jp/#/yorozuya/r/rec_01M3BVEH0W0A04RYAYC2JY6R3B" target="_blank" rel="noopener">出店募集ページへ</a>
+      </div>
+      <div class="recruit-card">
+        <div class="cta-label">ボランティアスタッフ募集</div>
+        <div class="recruit-title">百鬼の行列を、裏から支えよ</div>
+        <p class="recruit-desc">
+          当日の運営を支えるスタッフを募集中です。<br>
+          詳細・お申込みは募集ページへ。
+        </p>
+        <a class="cta-button cta-button-outline" href="https://event.youkaiya.jp/#/yorozuya/r/rec_01M3BVTF87XX46GQ1T6AZ95PQB" target="_blank" rel="noopener">スタッフ募集ページへ</a>
+      </div>
+    </div>
   </div>
 </section>
 
