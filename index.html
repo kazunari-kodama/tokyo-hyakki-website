@@ -12,6 +12,8 @@
 <meta property="og:url" content="https://tokyo-hyakki.com/">
 <meta property="og:site_name" content="東京百鬼夜行">
 <meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://tokyo-hyakki.com/static/images/main.jpg">
+<meta name="twitter:card" content="summary_large_image">
 
 <!-- 本公開時にこの行を削除すること -->
 <meta name="robots" content="noindex,nofollow">
@@ -96,6 +98,19 @@
     color: #c89858;
     margin-bottom: 40px;
   }
+  .hero-visual {
+    max-width: 440px;
+    margin: 0 auto 40px;
+    border: 1px solid #5a3a1a;
+    padding: 8px;
+    background: rgba(232, 168, 58, 0.06);
+    box-shadow: 0 0 48px rgba(0, 0, 0, 0.6);
+  }
+  .hero-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
   .hero-date-badge {
     display: inline-block;
     border: 1px solid #e8a83a;
@@ -171,7 +186,11 @@
     font-size: 15px;
     color: #fef3d4;
     letter-spacing: 0.1em;
+    line-height: 1.7;
   }
+  .info-card-wide { grid-column: 1 / -1; }
+  .info-card-note { font-size: 12px; color: #c89858; }
+  .info-card-link { font-size: 13px; color: #e8a83a; }
 
   .schedule { max-width: 540px; margin: 0 auto; }
   .schedule-row {
@@ -200,6 +219,7 @@
     letter-spacing: 0.08em;
   }
   .schedule-row.highlight .schedule-text { font-weight: 500; }
+  .schedule-note { font-size: 12px; color: #c89858; font-weight: normal; }
 
   .route-map {
     width: 100%;
@@ -240,6 +260,12 @@
     border: 0.5px solid #5a3a1a;
     padding: 24px;
     background: rgba(232, 168, 58, 0.04);
+  }
+  .partner-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
   }
   .partner-name {
     font-size: 18px;
@@ -478,10 +504,14 @@
   <h1 class="hero-title">東京百鬼夜行</h1>
   <div class="hero-subtitle">2026 IN KOENJI</div>
 
+  <figure class="hero-visual">
+    <img src="static/images/main.jpg" width="1200" height="1681" fetchpriority="high" alt="東京百鬼夜行2026 メインビジュアル — 髑髏や化け猫、河童など無数の妖怪がひしめくイラスト">
+  </figure>
+
   <div class="hero-date-badge">
     <div class="hero-date-label">開催日</div>
     <div class="hero-date-main">令和八年 十月二十四日 土</div>
-    <div class="hero-date-time">10:00 — 17:00</div>
+    <div class="hero-date-time">09:00 — 18:00</div>
   </div>
 </section>
 
@@ -495,12 +525,13 @@
       全国から妖怪が集まる関東最大規模の妖怪行列「東京百鬼夜行」。<br>
       この日高円寺では黄泉の国への扉が開き、魑魅魍魎たちが跳梁跋扈する。<br>
       カフェでくつろぐ妖怪、食べ歩きする妖怪、定食を食べる妖怪。<br>
-      そこかしこに妖怪がいる。<br><br>
+      どこにいっても妖怪まみれ！<br><br>
       今回も高円寺の大規模イベントである「高円寺フェス」と同日開催。<br>
       街全体がお祭りで賑わう日程での開催だ。<br>
       妖怪の舞台である高円寺ルック商店街全体は今年も妖怪大歓迎。<br>
       お店や街の住民と仲良くお話して楽しむのもいい<br>
-      （もちろん驚かせるのも忘れずに）。
+      （もちろん驚かせるのも忘れずに）。<br><br>
+      高円寺を妖怪で埋め尽くそう！
     </p>
   </div>
 </section>
@@ -512,9 +543,21 @@
       <div class="section-title">参加要項</div>
     </div>
     <div class="info-grid">
-      <div class="info-card">
+      <div class="info-card info-card-wide">
+        <div class="info-card-label">開催日時</div>
+        <div class="info-card-value">2026年10月24日（土）09:00 〜 18:00</div>
+      </div>
+      <div class="info-card info-card-wide">
         <div class="info-card-label">会場</div>
-        <div class="info-card-value">高円寺ルック商店街</div>
+        <div class="info-card-value">東京：高円寺ルック商店街<br><a href="https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E5%86%86%E5%AF%BA%E3%83%AB%E3%83%83%E3%82%AF%E5%95%86%E5%BA%97%E8%A1%97" target="_blank" rel="noopener" class="info-card-link">📍 Google マップ</a></div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-label">受付</div>
+        <div class="info-card-value">Material<br><span class="info-card-note">（更衣室もこちらです）</span></div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-label">アクセス</div>
+        <div class="info-card-value">JR高円寺駅から<br>新高円寺方面へ徒歩6分</div>
       </div>
       <div class="info-card">
         <div class="info-card-label">観覧</div>
@@ -528,7 +571,12 @@
         <div class="info-card-label">小学生以下</div>
         <div class="info-card-value">1,000円</div>
       </div>
+      <div class="info-card info-card-wide">
+        <div class="info-card-label">定員</div>
+        <div class="info-card-value">250名（残り7席）</div>
+      </div>
     </div>
+    <p class="route-note">参加費はいずれも1名あたり・税込です。</p>
   </div>
 </section>
 
@@ -538,8 +586,27 @@
       <div class="section-label">次第</div>
       <div class="section-title">当日の流れ</div>
     </div>
-    <div class="placeholder-card">
-      <div class="placeholder-text">準備中</div>
+    <div class="schedule">
+      <div class="schedule-row">
+        <div class="schedule-time">09:00</div>
+        <div class="schedule-text">イベント開始（更衣室開場）</div>
+      </div>
+      <div class="schedule-row">
+        <div class="schedule-time">14:00</div>
+        <div class="schedule-text">行列開始場所に集合（撮影会）<br><span class="schedule-note">場所：クイーンズ伊勢丹</span></div>
+      </div>
+      <div class="schedule-row highlight">
+        <div class="schedule-time">14:30</div>
+        <div class="schedule-text">東京百鬼夜行 行列開始</div>
+      </div>
+      <div class="schedule-row highlight">
+        <div class="schedule-time">15:25</div>
+        <div class="schedule-text">フィナーレ<br><span class="schedule-note">演奏 15:25〜15:50</span></div>
+      </div>
+      <div class="schedule-row">
+        <div class="schedule-time">18:00</div>
+        <div class="schedule-text">イベント終了（更衣室終了）</div>
+      </div>
     </div>
   </div>
 </section>
@@ -621,8 +688,16 @@
     <p class="lead-text" style="margin-bottom:32px;">
       東京百鬼夜行を盛り上げる、最強・最恐な妖怪たちの集まり。
     </p>
-    <div class="placeholder-card">
-      <div class="placeholder-text">準備中</div>
+    <div class="partner-list">
+      <div class="partner-card">
+        <img class="partner-image" src="static/images/akuyaku.jpg" width="1920" height="1080" loading="lazy" alt="創作集団 悪役連合 — 吽形 社つぐる、悪鬼武者 冴捨護、唐沢屋戯画、阿形 社召里">
+        <div class="partner-name">悪役連合</div>
+        <div class="partner-name-en">CREATIVE COLLECTIVE AKUYAKU RENGO</div>
+        <div class="partner-desc">
+          創作集団「悪役連合」。<br>
+          吽形 社つぐる／悪鬼武者 冴捨護／唐沢屋戯画／阿形 社召里 ほか
+        </div>
+      </div>
     </div>
 
   </div>

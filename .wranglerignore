@@ -1,3 +1,4 @@
 .git
 .wrangler
 wrangler.toml
+static/images/main.png
