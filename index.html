@@ -430,6 +430,20 @@
     background: #fef3d4;
     color: #1a0606;
   }
+  #recruit {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  #recruit::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: url("static/images/kooni-1600.png") center 70% / min(1400px, 140%) auto no-repeat;
+    opacity: 0.14;
+    filter: sepia(1) saturate(2.5) hue-rotate(-15deg);
+  }
   .recruit-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -444,7 +458,7 @@
     text-align: center;
     border: 0.5px solid #5a3a1a;
     padding: 32px 20px;
-    background: rgba(232, 168, 58, 0.04);
+    background: rgba(15, 6, 6, 0.55);
   }
   .recruit-title {
     font-size: 18px;
@@ -546,6 +560,7 @@
     .lantern.left { left: 16px; }
     .lantern.right { right: 16px; }
     section { padding: 48px 18px; }
+    #recruit::before { background-size: auto 48%; background-position: 35% 62%; }
     .engi-hero { min-height: 60svh; margin: 0 -18px 36px; padding: 0 18px 16px; }
     .section-title { font-size: 18px; }
     .info-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
