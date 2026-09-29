@@ -59,11 +59,46 @@
 
   .hero {
     position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 90px 24px 70px;
     text-align: center;
-    background: radial-gradient(ellipse at center, #5a0e0e 0%, #2a0606 60%, #1a0606 100%);
+    background: #1a0606;
     overflow: hidden;
+    isolation: isolate;
   }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: url("static/images/main.jpg") center 30% / cover no-repeat;
+    animation: hero-drift 40s ease-in-out infinite alternate;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(ellipse 60% 50% at center, rgba(26, 6, 6, 0.78) 0%, rgba(26, 6, 6, 0.35) 100%),
+      linear-gradient(to bottom, rgba(26, 6, 6, 0.55) 0%, rgba(90, 14, 14, 0.25) 45%, rgba(26, 6, 6, 0.9) 88%, #1a0606 100%);
+  }
+  @media (min-width: 1201px) {
+    .hero::before { background-image: url("static/images/main-1920.jpg"); }
+  }
+  @keyframes hero-drift {
+    from { transform: scale(1.05) translateY(0); }
+    to { transform: scale(1.15) translateY(-3%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero::before { animation: none; transform: scale(1.05); }
+  }
+  .hero > * { text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85); }
   .lantern {
     position: absolute;
     top: 28px;
@@ -86,7 +121,7 @@
     margin-bottom: 16px;
   }
   .hero-title {
-    font-size: 60px;
+    font-size: 72px;
     font-weight: 400;
     letter-spacing: 0.18em;
     margin-bottom: 8px;
@@ -98,24 +133,13 @@
     color: #c89858;
     margin-bottom: 40px;
   }
-  .hero-visual {
-    max-width: 440px;
-    margin: 0 auto 40px;
-    border: 1px solid #5a3a1a;
-    padding: 8px;
-    background: rgba(232, 168, 58, 0.06);
-    box-shadow: 0 0 48px rgba(0, 0, 0, 0.6);
-  }
-  .hero-visual img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
   .hero-date-badge {
     display: inline-block;
     border: 1px solid #e8a83a;
     padding: 16px 32px;
-    background: rgba(232, 168, 58, 0.08);
+    background: rgba(26, 6, 6, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
   }
   .hero-date-label {
     font-size: 11px;
@@ -445,7 +469,7 @@
 
   @media (max-width: 600px) {
     .hero { padding: 70px 18px 56px; }
-    .hero-title { font-size: 42px; letter-spacing: 0.12em; }
+    .hero-title { font-size: 46px; letter-spacing: 0.12em; }
     .hero-supertitle { font-size: 10px; letter-spacing: 0.4em; }
     .hero-date-main { font-size: 16px; }
     .lantern { width: 30px; height: 40px; top: 20px; }
@@ -503,10 +527,6 @@
   <div class="hero-tagline">関東最大規模の妖怪行列</div>
   <h1 class="hero-title">東京百鬼夜行</h1>
   <div class="hero-subtitle">2026 IN KOENJI</div>
-
-  <figure class="hero-visual">
-    <img src="static/images/main.jpg" width="1200" height="1681" fetchpriority="high" alt="東京百鬼夜行2026 メインビジュアル — 髑髏や化け猫、河童など無数の妖怪がひしめくイラスト">
-  </figure>
 
   <div class="hero-date-badge">
     <div class="hero-date-label">開催日</div>
