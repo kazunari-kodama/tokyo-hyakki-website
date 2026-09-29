@@ -299,6 +299,24 @@
   .viewing-list dt { color: #e8a83a; letter-spacing: 0.1em; }
   .viewing-list dd { margin: 0; color: #fde0a0; }
   .route-note a { color: #e8a83a; }
+  .venue-map {
+    max-width: 580px;
+    margin: 12px auto 0;
+  }
+  .venue-map iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 0.5px solid #5a3a1a;
+  }
+  .venue-map-caption {
+    margin-top: 8px;
+    text-align: center;
+    font-size: 12px;
+    color: #c89858;
+    letter-spacing: 0.1em;
+  }
+  .venue-map-caption a { color: #e8a83a; }
   .schedule-row {
     display: flex;
     padding: 18px 0;
@@ -745,7 +763,7 @@
     <div class="info-grid">
       <div class="info-card">
         <div class="info-card-label">受付</div>
-        <div class="info-card-value">Material<br><span class="info-card-note">（更衣室もこちらです）</span></div>
+        <div class="info-card-value">MATERIAL<br><span class="info-card-note">（更衣室もこちらです）</span><br><a href="https://maps.app.goo.gl/ZQkyYMgKPaxQhhyT9" target="_blank" rel="noopener" class="info-card-link">📍 Google マップ</a></div>
       </div>
       <div class="info-card">
         <div class="info-card-label">参加費</div>
@@ -755,6 +773,10 @@
         <div class="info-card-label">定員</div>
         <div class="info-card-value">250名（残り7席）</div>
       </div>
+    </div>
+    <div class="venue-map">
+      <iframe src="https://www.google.com/maps?q=35.7026018,139.6511675&amp;z=17&amp;hl=ja&amp;output=embed" title="受付・更衣室 MATERIAL の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <div class="venue-map-caption">受付・更衣室：MATERIAL（<a href="https://maps.app.goo.gl/ZQkyYMgKPaxQhhyT9" target="_blank" rel="noopener">Google マップで開く</a>）</div>
     </div>
     <p class="route-note">参加費はいずれも1名あたり・税込です。事前申込制です。<br>参加の前に<a href="#rules">妖怪変化規定</a>と<a href="#faq">妖怪参加者向けFAQ</a>をご確認ください。</p>
     <div class="cta-block" style="margin-top:28px;">
