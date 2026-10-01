@@ -618,6 +618,7 @@
     letter-spacing: 0.3em;
     color: #c89858;
   }
+  .footer-main a { color: inherit; }
   .footer-credits {
     margin: 12px auto 0;
     font-size: 11px;
@@ -658,6 +659,63 @@
     nav.topnav a { font-size: 10px; }
   }
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NVGCH3HNMB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NVGCH3HNMB');
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "東京百鬼夜行2026",
+  "description": "全国から妖怪が集まる関東最大規模の妖怪行列。高円寺フェスと同日開催。観覧無料。",
+  "startDate": "2026-10-24T09:00:00+09:00",
+  "endDate": "2026-10-24T18:00:00+09:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "isAccessibleForFree": true,
+  "image": ["https://tokyo-hyakki.com/static/images/main.jpg"],
+  "url": "https://tokyo-hyakki.com/",
+  "location": {
+    "@type": "Place",
+    "name": "高円寺ルック商店街",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "杉並区",
+      "addressRegion": "東京都",
+      "addressCountry": "JP"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "合同会社妖怪屋",
+    "url": "https://youkaiya.jp/"
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "妖怪参加（大人）",
+      "price": "3000",
+      "priceCurrency": "JPY",
+      "availability": "https://schema.org/LimitedAvailability",
+      "url": "https://event.youkaiya.jp/#/events/evt_01KZD89ZXK330XY40N6GP10VTE"
+    },
+    {
+      "@type": "Offer",
+      "name": "妖怪参加（小学生以下）",
+      "price": "1000",
+      "priceCurrency": "JPY",
+      "availability": "https://schema.org/LimitedAvailability",
+      "url": "https://event.youkaiya.jp/#/events/evt_01KZD89ZXK330XY40N6GP10VTE"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -748,7 +806,7 @@
       </div>
       <div class="info-card">
         <div class="info-card-label">アクセス</div>
-        <div class="info-card-value">JR高円寺駅から<br>新高円寺方面へ徒歩6分</div>
+        <div class="info-card-value">JR高円寺駅から<br>新高円寺方面へ徒歩6分<br><span class="info-card-note">公共交通機関でお越しください</span></div>
       </div>
       <div class="info-card">
         <div class="info-card-label">観覧</div>
@@ -779,7 +837,7 @@
       </div>
       <div class="info-card info-card-wide">
         <div class="info-card-label">定員</div>
-        <div class="info-card-value">250名（残り7席）</div>
+        <div class="info-card-value">250名（残りわずか）</div>
       </div>
     </div>
     <div class="venue-map">
@@ -841,9 +899,9 @@
 
     <div class="sub-heading">その他</div>
     <dl class="viewing-list">
-      <dt>交通規制</dt><dd>行列ルートは当日、交通規制が入ります。</dd>
-      <dt>雨天</dt><dd>小雨決行。荒天時は行列を中止する場合があります。</dd>
-      <dt>トイレ</dt><dd>ルック商店街の各所にあります。</dd>
+      <dt>交通規制</dt><dd>行列ルートは当日、交通規制が入ります。お車でのご来場はお控えいただき、公共交通機関をご利用ください。</dd>
+      <dt>雨天</dt><dd>小雨決行。荒天時は行列を中止する場合があります。中止などの最新情報は公式X（<a href="https://x.com/AidaKazunari" target="_blank" rel="noopener">@AidaKazunari</a>）でお知らせします。</dd>
+      <dt>トイレ</dt><dd>ルック商店街の各所にあります。当日は手書きのトイレマップを掲示する予定です。</dd>
       <dt>体調不良・怪我</dt><dd>近くの誘導スタッフにお声がけください。</dd>
     </dl>
 
@@ -1041,7 +1099,7 @@
     <div class="faq">
       <details>
         <summary>Q. トイレはありますか？</summary>
-        <div class="answer">ルック商店街各所にあります。トイレマップも展開予定です。</div>
+        <div class="answer">ルック商店街各所にあります。当日は手書きのトイレマップを掲示する予定です。</div>
       </details>
       <details>
         <summary>Q. 行列の所要時間はどのぐらいですか？</summary>
@@ -1069,7 +1127,7 @@
       </details>
       <details>
         <summary>Q. 怪我をした場合、気分が悪い場合はどうしたらよい？</summary>
-        <div class="answer">近くの誘導スタッフ（腕章をつけています）に声をかけ、最寄りの更衣室、高円寺ルック事務所等で一時救護を受けてください。情報共有用に東京百鬼夜行オープンチャットを開設いたしますので、そちらにご一報をお願いいたします。</div>
+        <div class="answer">近くの誘導スタッフ（腕章をつけています）に声をかけ、最寄りの更衣室、高円寺ルック事務所等で一時救護を受けてください。情報共有用に東京百鬼夜行オープンチャットを開設いたします（参加者の方にはメールでご案内します）ので、そちらにご一報をお願いいたします。</div>
       </details>
       <details>
         <summary>Q. 更衣室に荷物は預けておけますか？</summary>
@@ -1085,7 +1143,7 @@
       </details>
       <details>
         <summary>Q. 雨天時は？</summary>
-        <div class="answer">小雨決行、荒天時は行列を実施しない可能性があります。高円寺の妖怪歓迎店舗にてお休みいただくか、各更衣室にて待機をお願いいたします。再会可能になった場合はオープンチャットでご連絡します。</div>
+        <div class="answer">小雨決行、荒天時は行列を実施しない可能性があります。高円寺の妖怪歓迎店舗にてお休みいただくか、各更衣室にて待機をお願いいたします。再開可能になった場合はオープンチャットと公式X（<a href="https://x.com/AidaKazunari" target="_blank" rel="noopener">@AidaKazunari</a>）でご連絡します。</div>
       </details>
       <details>
         <summary>Q. SNSにあげるときはどうしたら？</summary>
@@ -1145,6 +1203,8 @@
       <div class="contact-name">合同会社妖怪屋（相田 一成）</div>
       <div>メール：<a href="mailto:kazunari.aida@gmail.com">kazunari.aida@gmail.com</a></div>
       <div>お電話：090-6509-5822</div>
+      <div>公式X：<a href="https://x.com/AidaKazunari" target="_blank" rel="noopener">@AidaKazunari</a></div>
+      <div>妖怪屋 公式サイト：<a href="https://youkaiya.jp/" target="_blank" rel="noopener">youkaiya.jp</a></div>
     </div>
 
     <div class="share-buttons">
@@ -1159,12 +1219,13 @@
 
 <footer>
   <img class="footer-logo" src="static/images/youkaiya_logo.jpg" width="320" height="320" loading="lazy" alt="合同会社妖怪屋 ロゴ">
-  <div class="footer-main">主催 合同会社妖怪屋</div>
+  <div class="footer-main">主催 <a href="https://youkaiya.jp/" target="_blank" rel="noopener">合同会社妖怪屋</a></div>
   <dl class="footer-credits">
     <div><dt>協賛</dt><dd>高円寺ルック商店街振興組合</dd></div>
     <div><dt>協力</dt><dd><span>高円寺フェス実行委員会</span>／<span>和楽器BAR龍宮 ~ryu guw~</span></dd></div>
   </dl>
   <div class="footer-sub">YOUKAIYA LLC © 2026 / 〒134-0088 東京都江戸川区西葛西6-27-6</div>
+  <div class="footer-sub">当サイトではアクセス解析のため Google アナリティクスを使用しています。</div>
 </footer>
 
 </body>
