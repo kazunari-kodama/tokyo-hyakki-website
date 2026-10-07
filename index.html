@@ -461,6 +461,49 @@
     letter-spacing: 0.03em;
   }
 
+  .shop-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .shop-card {
+    border: 0.5px solid #5a3a1a;
+    background: rgba(232, 168, 58, 0.04);
+  }
+  .shop-photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+  }
+  .shop-photo { display: block; overflow: hidden; aspect-ratio: 2 / 1; }
+  .shop-photo-main { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
+  .shop-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  .shop-photo:hover img { transform: scale(1.04); }
+  .shop-photo-contain { background: #fff; }
+  .shop-photo-contain img { object-fit: contain; padding: 8%; }
+  .shop-photo-contain:hover img { transform: none; }
+  .shop-body { padding: 18px 20px 22px; }
+  .shop-name {
+    font-size: 17px;
+    letter-spacing: 0.15em;
+    color: #fef3d4;
+    margin-bottom: 10px;
+  }
+  .shop-desc {
+    font-size: 13px;
+    line-height: 1.85;
+    color: #fde0a0;
+    letter-spacing: 0.03em;
+  }
+
   .gallery-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -777,6 +820,7 @@
     section { padding: 48px 18px; }
     #recruit::before { background-size: auto 48%; background-position: 35% 62%; }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+    .shop-list { grid-template-columns: 1fr; }
     .camera-list { grid-template-columns: 1fr; gap: 12px; }
     .camera-card { display: grid; grid-template-columns: 112px 1fr; }
     .camera-photo { height: 100%; aspect-ratio: auto; min-height: 150px; }
@@ -865,6 +909,7 @@
     <li><a href="#map">会場</a></li>
     <li><a href="#partners">協力団体</a></li>
     <li><a href="#gallery">ギャラリー</a></li>
+    <li><a href="#shops">出店</a></li>
     <li><a href="#rules">参加規定</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact">問合せ</a></li>
@@ -1257,6 +1302,60 @@
   <button class="lightbox-btn lightbox-next" type="button" aria-label="次の写真">›</button>
 </dialog>
 
+<section id="shops" class="section-dark">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">出店</div>
+      <div class="section-title">出店者のご紹介</div>
+    </div>
+    <p class="lead-text" style="margin-bottom:32px;">百鬼夜行の日だけ並ぶ、妖怪たちの市。</p>
+    <div class="shop-list">
+      <div class="shop-card">
+        <div class="shop-photos">
+          <a class="shop-photo shop-photo-main" href="static/images/shop/web/01_1.jpg"><img src="static/images/shop/web/01_1-thumb.jpg" loading="lazy" alt="じゃ狐 — 赤い狐面"></a>
+          <a class="shop-photo" href="static/images/shop/web/01_2.jpg"><img src="static/images/shop/web/01_2-thumb.jpg" loading="lazy" alt="じゃ狐 — 白い狐面"></a>
+          <a class="shop-photo" href="static/images/shop/web/01_3.jpg"><img src="static/images/shop/web/01_3-thumb.jpg" loading="lazy" alt="じゃ狐 — 狸の面"></a>
+        </div>
+        <div class="shop-body">
+          <div class="shop-name">じゃ狐</div>
+          <div class="shop-desc">張子の狐面、妖怪面の販売</div>
+        </div>
+      </div>
+      <div class="shop-card">
+        <div class="shop-photos">
+          <a class="shop-photo shop-photo-main" href="static/images/shop/web/02_1.jpg"><img src="static/images/shop/web/02_1-thumb.jpg" loading="lazy" alt="烏水屋-うすいや- — 彼岸花の簪"></a>
+          <a class="shop-photo" href="static/images/shop/web/02_2.jpg"><img src="static/images/shop/web/02_2-thumb.jpg" loading="lazy" alt="烏水屋-うすいや- — 組紐のネックレス"></a>
+          <a class="shop-photo" href="static/images/shop/web/02_3.jpg"><img src="static/images/shop/web/02_3-thumb.jpg" loading="lazy" alt="烏水屋-うすいや- — 付け爪のアクセサリー"></a>
+        </div>
+        <div class="shop-body">
+          <div class="shop-name">烏水屋-うすいや-</div>
+          <div class="shop-desc">ディップアートで制作した彼岸花を筆頭に様々な花の簪や耳飾りなどのアクセサリーを制作しています。<br>他にも、当日その場で着用いただけるようなネックレスも持参予定です。</div>
+        </div>
+      </div>
+      <div class="shop-card">
+        <div class="shop-photos">
+          <a class="shop-photo shop-photo-main" href="static/images/shop/web/03_1.jpg"><img src="static/images/shop/web/03_1-thumb.jpg" loading="lazy" alt="天下無敵 — キラキラのステッカー"></a>
+          <a class="shop-photo" href="static/images/shop/web/03_2.jpg"><img src="static/images/shop/web/03_2-thumb.jpg" loading="lazy" alt="天下無敵 — イベント出店時のブース"></a>
+          <a class="shop-photo" href="static/images/shop/web/03_3.jpg"><img src="static/images/shop/web/03_3-thumb.jpg" loading="lazy" alt="天下無敵 — パープルソーダのリング"></a>
+        </div>
+        <div class="shop-body">
+          <div class="shop-name">天下無敵</div>
+          <div class="shop-desc">フィギュア/ステッカー/Tシャツ/アクリルキーホルダー/リング/ピンなど<br>多数の種類があるので、指定していただければ他の方と被らないものにすることも可能です<br>また、今回のイベント用に妖怪テイストのものを作る予定です</div>
+        </div>
+      </div>
+      <div class="shop-card">
+        <div class="shop-photos">
+          <a class="shop-photo shop-photo-main shop-photo-contain" href="static/images/shop/web/04_1.jpg"><img src="static/images/shop/web/04_1-thumb.jpg" loading="lazy" alt="藤木屋 — 藤木屋のロゴ"></a>
+        </div>
+        <div class="shop-body">
+          <div class="shop-name">藤木屋</div>
+          <div class="shop-desc">和装小物</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="rules">
   <div class="container">
     <div class="section-header">
@@ -1440,20 +1539,22 @@
 
 <script>
   (function () {
-    var items = Array.prototype.slice.call(document.querySelectorAll('.gallery-item'));
+    var links = Array.prototype.slice.call(document.querySelectorAll('.gallery-item, .shop-photo'));
     var box = document.getElementById('lightbox');
-    if (!items.length || !box || !box.showModal) return;
+    if (!links.length || !box || !box.showModal) return;
     var img = box.querySelector('.lightbox-img');
+    var items = [];
     var current = 0;
     function show(i) {
       current = (i + items.length) % items.length;
       img.src = items[current].href;
       img.alt = items[current].querySelector('img').alt;
     }
-    items.forEach(function (a, i) {
+    links.forEach(function (a) {
       a.addEventListener('click', function (e) {
         e.preventDefault();
-        show(i);
+        items = Array.prototype.slice.call(a.parentElement.querySelectorAll('.gallery-item, .shop-photo'));
+        show(items.indexOf(a));
         box.showModal();
       });
     });
