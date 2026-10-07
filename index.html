@@ -408,6 +408,49 @@
     letter-spacing: 0.03em;
   }
 
+  .sub-heading.camera-heading { max-width: 900px; }
+  .camera-lead {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #fde0a0;
+  }
+  .camera-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .camera-card {
+    border: 0.5px solid #5a3a1a;
+    background: rgba(232, 168, 58, 0.04);
+  }
+  .camera-photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .camera-body { padding: 16px 16px 20px; }
+  .camera-name {
+    font-size: 17px;
+    letter-spacing: 0.15em;
+    color: #fef3d4;
+  }
+  .camera-name + .camera-desc { margin-top: 12px; }
+  .camera-handle { margin: 4px 0 12px; font-size: 12px; letter-spacing: 0.05em; }
+  .camera-handle a { color: #e8a83a; }
+  .camera-desc {
+    font-size: 13px;
+    line-height: 1.85;
+    color: #fde0a0;
+    letter-spacing: 0.03em;
+  }
+
   .gallery-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -724,6 +767,11 @@
     section { padding: 48px 18px; }
     #recruit::before { background-size: auto 48%; background-position: 35% 62%; }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+    .camera-list { grid-template-columns: 1fr; gap: 12px; }
+    .camera-card { display: grid; grid-template-columns: 112px 1fr; }
+    .camera-photo { height: 100%; aspect-ratio: auto; min-height: 150px; }
+    .camera-body { padding: 12px 14px 14px; }
+    .camera-name { font-size: 15px; }
     .engi-hero { min-height: 60svh; margin: 0 -18px 36px; padding: 0 18px 16px; }
     .section-title { font-size: 18px; }
     .info-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
@@ -1119,6 +1167,34 @@
         <div class="partner-name">変幻堂【陽】</div>
         <div class="partner-desc">
           変化師オリ主宰。絵巻物から飛び出してきたような妖怪たちをテーマに集めた妖怪集団です。イベントでのグリーティングや舞台など、さまざまな場所で活躍中！
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading camera-heading">公式カメラマン</div>
+    <p class="camera-lead">当日の撮影は、創作撮影集団「とらいぽっず」の3名が公式カメラマンとして担当します。</p>
+    <div class="camera-list">
+      <div class="camera-card">
+        <img class="camera-photo" src="static/images/camera/hei.jpg" width="720" height="1080" loading="lazy" alt="とらいぽっずのカメラマン（@unmatchsan）の後ろ姿">
+        <div class="camera-body">
+          <div class="camera-name">@unmatchsan</div>
+          <div class="camera-handle"><a href="https://x.com/unmatchsan" target="_blank" rel="noopener">X：@unmatchsan</a></div>
+          <div class="camera-desc">異形頭、妖怪、仮面、スチームパンク、ゴスロリなど、様々なカルチャーを横断し撮影するカメラマン。さまざまな表現や文化に触れながら、そこに宿る個性や世界観を写真として捉える。被写体そのものだけでなく、その背景にあるカルチャーに敬意を払い、一枚の作品として成立する写真を追求している。</div>
+        </div>
+      </div>
+      <div class="camera-card">
+        <img class="camera-photo" src="static/images/camera/agito.jpg" width="720" height="673" loading="lazy" alt="顎門（Agito）">
+        <div class="camera-body">
+          <div class="camera-name">顎門（Agito）</div>
+          <div class="camera-handle"><a href="https://x.com/agito_photos" target="_blank" rel="noopener">X：@agito_photos</a></div>
+          <div class="camera-desc">関東を拠点に活動するフォトグラファー。陰影を活かした妖艶な作風を得意とし、創作ポートレートをはじめ、ウェディング、家族写真、イベント、LIVE撮影など多方面で活躍中。屋外・スタジオ問わず、ロケーションに応じた柔軟な対応が可能。</div>
+        </div>
+      </div>
+      <div class="camera-card">
+        <img class="camera-photo" src="static/images/camera/namio.jpg" width="720" height="1080" loading="lazy" alt="カメラを構える波魚">
+        <div class="camera-body">
+          <div class="camera-name">波魚</div>
+          <div class="camera-desc">ライブステージ撮影を中心に、撮影を請け負うカメラマン。昨今ではスチームパンクやサイバーパンク、異形頭、妖怪などの一次創作がメインになりつつある。蒸気和装寄合主催、和装の着付けも可。</div>
         </div>
       </div>
     </div>
