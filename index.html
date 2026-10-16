@@ -502,6 +502,24 @@
   .shop-photo-contain img { object-fit: contain; padding: 8%; }
   .shop-photo-contain:hover img { transform: none; }
   .shop-body { padding: 18px 20px 22px; }
+  .shop-card-special {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    border-color: #e8a83a;
+    background: rgba(232, 168, 58, 0.08);
+  }
+  .shop-card-special .shop-photos { grid-template-columns: 1fr; }
+  .shop-card-special .shop-body { padding: 26px 28px; align-self: center; }
+  .shop-badge {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 3px 10px;
+    border: 0.5px solid #e8a83a;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: #e8a83a;
+  }
   .shop-name {
     font-size: 17px;
     letter-spacing: 0.15em;
@@ -833,6 +851,8 @@
     #recruit::before { background-size: auto 48%; background-position: 35% 62%; }
     .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
     .shop-list { grid-template-columns: 1fr; }
+    .shop-card-special { grid-template-columns: 1fr; }
+    .shop-card-special .shop-body { padding: 18px 20px 22px; }
     .camera-list { grid-template-columns: 1fr; gap: 12px; }
     .camera-card { display: grid; grid-template-columns: 112px 1fr; }
     .camera-photo { height: 100%; aspect-ratio: auto; min-height: 150px; }
@@ -1324,6 +1344,16 @@
     <p class="lead-text" style="margin-bottom:12px;">百鬼夜行の日だけ並ぶ、妖怪たちの市。</p>
     <p class="shop-place">ポップアップストア会場：<a href="https://maps.app.goo.gl/8CRTedQcSevwd94EA" target="_blank" rel="noopener" class="schedule-link">地図を見る📍</a><br><span>Googleマップでは「お葬儀のすどう」と表示される場所です</span></p>
     <div class="shop-list">
+      <div class="shop-card shop-card-special">
+        <div class="shop-photos">
+          <a class="shop-photo shop-photo-main" href="static/images/shop/web/05_1.jpg"><img src="static/images/shop/web/05_1-thumb.jpg" loading="lazy" alt="やのまん — 目玉おやじのぬいぐるみが並ぶブース"></a>
+        </div>
+        <div class="shop-body">
+          <div class="shop-badge">SPECIAL</div>
+          <div class="shop-name">株式会社やのまん</div>
+          <div class="shop-desc">ゲゲゲの鬼太郎（水木プロ）<span style="display:inline-block;">ライセンス商品</span><br>キャラクタージグソーパズル</div>
+        </div>
+      </div>
       <div class="shop-card">
         <div class="shop-photos">
           <a class="shop-photo shop-photo-main" href="static/images/shop/web/01_1.jpg"><img src="static/images/shop/web/01_1-thumb.jpg" loading="lazy" alt="じゃ狐 — 赤い狐面"></a>
