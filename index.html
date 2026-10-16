@@ -510,6 +510,7 @@
     background: rgba(232, 168, 58, 0.08);
   }
   .shop-card-special .shop-photos { grid-template-columns: 1fr; }
+  .shop-card-special .shop-photo-main { aspect-ratio: auto; height: 100%; min-height: 300px; }
   .shop-card-special .shop-body { padding: 26px 28px; align-self: center; }
   .shop-badge {
     display: inline-block;
@@ -852,6 +853,7 @@
     .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
     .shop-list { grid-template-columns: 1fr; }
     .shop-card-special { grid-template-columns: 1fr; }
+    .shop-card-special .shop-photo-main { aspect-ratio: 4 / 3; height: auto; min-height: 0; }
     .shop-card-special .shop-body { padding: 18px 20px 22px; }
     .camera-list { grid-template-columns: 1fr; gap: 12px; }
     .camera-card { display: grid; grid-template-columns: 112px 1fr; }
@@ -1351,7 +1353,8 @@
         <div class="shop-body">
           <div class="shop-badge">SPECIAL</div>
           <div class="shop-name">株式会社やのまん</div>
-          <div class="shop-desc">ゲゲゲの鬼太郎（水木プロ）<span style="display:inline-block;">ライセンス商品</span><br>キャラクタージグソーパズル</div>
+          <div class="shop-desc">1954年創業、東京・蔵前に本社を構えるジグソーパズルのパイオニア。1974年に日本で初めて国産ジグソーパズルを完成させ、その普及に大きく貢献してきました。パズルのほか、カードサプライやボードゲーム、雑貨なども手がけています。<br>当日はゲゲゲの鬼太郎（水木プロ）ライセンス商品と、キャラクタージグソーパズルを出店予定です。</div>
+          <div class="shop-link"><a href="https://www.yanoman.co.jp/" target="_blank" rel="noopener">公式サイト</a></div>
         </div>
       </div>
       <div class="shop-card">
