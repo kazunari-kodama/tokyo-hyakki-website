@@ -361,18 +361,52 @@
     margin-top: 18px;
   }
 
-  .placeholder-card {
-    border: 0.5px dashed #5a3a1a;
-    padding: 36px 24px;
-    text-align: center;
-    max-width: 540px;
+  .yomi-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 900px;
     margin: 0 auto;
-    background: rgba(232, 168, 58, 0.03);
   }
-  .placeholder-text {
-    font-size: 14px;
-    color: #c89858;
+  .yomi-card {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    border: 0.5px solid #5a3a1a;
+    background: rgba(232, 168, 58, 0.04);
+  }
+  .yomi-photo { display: block; overflow: hidden; min-height: 200px; }
+  .yomi-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.3s;
+  }
+  .yomi-photo:hover img { transform: scale(1.04); }
+  .yomi-photo-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 0.5px dashed #5a3a1a;
+    font-size: 11px;
     letter-spacing: 0.15em;
+    color: #c89858;
+  }
+  .yomi-body { min-width: 0; padding: 14px 16px 16px; }
+  .yomi-name {
+    font-size: 18px;
+    letter-spacing: 0.15em;
+    color: #fef3d4;
+  }
+  .yomi-kana { font-size: 11px; letter-spacing: 0.15em; color: #c89858; }
+  .yomi-meta { margin-top: 6px; font-size: 11px; letter-spacing: 0.1em; color: #e8a83a; }
+  .yomi-desc {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 1.8;
+    color: #fde0a0;
+    letter-spacing: 0.03em;
   }
 
   .partner-list {
@@ -855,6 +889,10 @@
     .shop-card-special { grid-template-columns: 1fr; }
     .shop-card-special .shop-photo-main { aspect-ratio: 4 / 3; height: auto; min-height: 0; }
     .shop-card-special .shop-body { padding: 18px 20px 22px; }
+    .yomi-list { grid-template-columns: 1fr; gap: 12px; }
+    .yomi-card { grid-template-columns: 112px 1fr; }
+    .yomi-photo { min-height: 150px; }
+    .yomi-body { padding: 12px 14px 14px; }
     .camera-list { grid-template-columns: 1fr; gap: 12px; }
     .camera-card { display: grid; grid-template-columns: 112px 1fr; }
     .camera-photo { height: 100%; aspect-ratio: auto; min-height: 150px; }
@@ -1218,7 +1256,7 @@
   </div>
 </section>
 
-<section>
+<section id="yomotsu">
   <div class="container">
     <div class="section-header">
       <div class="section-label">黄泉十怪</div>
@@ -1228,8 +1266,92 @@
       東京百鬼夜行を彩る黄泉最強の十妖。<br>
       その姿をみたものは・・・もう。
     </p>
-    <div class="placeholder-card">
-      <div class="placeholder-text">準備中</div>
+    <div class="yomi-list">
+      <div class="yomi-card">
+        <a class="yomi-photo" href="static/images/yomotsu/yurai.jpg"><img src="static/images/yomotsu/yurai-thumb.jpg" loading="lazy" alt="鼬雷の姿"></a>
+        <div class="yomi-body">
+          <div class="yomi-name">鼬雷</div>
+          <div class="yomi-kana">ゆうらい</div>
+          <div class="yomi-meta">雷獣</div>
+          <div class="yomi-desc">昔は悪戯に雷を落とし人間を驚かせ、持ち物を奪ったりしていた。しかし一人の坊主に雷を封じる数珠を巻かれてからは少しずつ大人しくなり、坊主が亡くなり数珠の力が無くなった今もそれを身につけたまま暮らしている。見どころは開閉する獣のマスク。</div>
+        </div>
+      </div>
+      <div class="yomi-card">
+        <div class="yomi-photo yomi-photo-empty">写真準備中</div>
+        <div class="yomi-body">
+          <div class="yomi-name">秘鶴</div>
+          <div class="yomi-kana">ひめつる</div>
+          <div class="yomi-meta">鶴の妖怪　演：碧</div>
+          <div class="yomi-desc">受けた恩を相手の生涯にわたって返し続ける鶴の妖怪。かつて命を救われた恩をその者の伴侶となることで返したのが始まりだった。相手が生きる限り尽くし続けるその性質は、深い愛情からやがて執着へと変わっていく。たとえ相手が老い、死に、土へ還ろうとも、その生涯を最後まで共にする。そしてまた移ろいゆく悠久の時の中で次の誰かを愛する、永遠に一途な根無し草。</div>
+        </div>
+      </div>
+      <div class="yomi-card">
+        <div class="yomi-photo yomi-photo-empty">写真準備中</div>
+        <div class="yomi-body">
+          <div class="yomi-name">紅金魚</div>
+          <div class="yomi-kana">べにきんぎょ</div>
+          <div class="yomi-desc">江戸の読本『梅花氷裂』の藻の花に思いを重ねた女たち、その晴れぬ哀しみが積もり生まれた妖怪。紅き衣に怒りの角を戴き、女たちの怨念を操る。手にした長団扇をひと振りすれば、紅き吹雪とともにかつての情念が蘇るという。</div>
+        </div>
+      </div>
+      <div class="yomi-card">
+        <div class="yomi-photo yomi-photo-empty">写真準備中</div>
+        <div class="yomi-body">
+          <div class="yomi-name">一郎太 獄門</div>
+          <div class="yomi-kana">いちろうた ごくもん</div>
+          <div class="yomi-meta">烏天狗</div>
+          <div class="yomi-desc">生前は一郎太という人間だった男が、とある事故で死んだ無念から、山中で烏天狗として妖怪の身を得た。結袈裟に括られたしゃれこうべは、一郎太が人間だった頃の家族の首。少し不穏で、暗くて、湿度の高い、それでいてどこか物悲しい、日本特有のホラーをまとう。</div>
+        </div>
+      </div>
+      <div class="yomi-card">
+        <div class="yomi-photo yomi-photo-empty">写真準備中</div>
+        <div class="yomi-body">
+          <div class="yomi-name">白島</div>
+          <div class="yomi-kana">しろじま</div>
+          <div class="yomi-meta">演：𥹥形</div>
+          <div class="yomi-desc">二つの大河より彼方から、東へ東へと流れ着いた妖怪。多くの土地の要素をまとい、その由来は一つに定められない。見る者の文化や記憶によって姿を変え、この島国では白狐と捉えられることが多い。赤い牛の姿が街に息づく城下町を離れ、ふらりと漂ううちに、古きも新しきも交わる街へと辿り着いた。</div>
+        </div>
+      </div>
+      <div class="yomi-card">
+        <div class="yomi-photo yomi-photo-empty">写真準備中</div>
+        <div class="yomi-body">
+          <div class="yomi-name">骨女</div>
+          <div class="yomi-kana">ほねおんな</div>
+          <div class="yomi-meta">演：雨季</div>
+          <div class="yomi-desc">いつも簪を刺して綺麗に着飾っていた骨女。けれどこの骨女は、信じていた人に捨てられたのでしょう。襦袢姿のまま、裏切ったあの人を探し出し地獄に突き落とすため、いえ共に地獄に堕ちるために。今日も夜道を彷徨います。私と共に行きましょう。</div>
+        </div>
+      </div>
+      <div class="yomi-card">
+        <div class="yomi-photo yomi-photo-empty">写真準備中</div>
+        <div class="yomi-body">
+          <div class="yomi-name">うらみ</div>
+          <div class="yomi-meta">狐の妖怪　演：おとろ</div>
+          <div class="yomi-desc">人の心に潜む、羨望や未練から生まれた狐の妖怪。これまで「スナックうらみ」を開店し、人と妖怪を結びつける居場所も作ってきた。時代とともに移り変わる幸せの形に揺れながら、今回は結婚への憧れと、誰かが決めた幸せに縛られる心を抱えた「黒い花嫁」として現れる。</div>
+        </div>
+      </div>
+      <div class="yomi-card">
+        <div class="yomi-photo yomi-photo-empty">写真準備中</div>
+        <div class="yomi-body">
+          <div class="yomi-name">すねこすり</div>
+          <div class="yomi-meta">演：シスイ</div>
+          <div class="yomi-desc">主に岡山に伝わる、夜道で人の足元にまとわりつき歩行を邪魔する妖怪。この秋、遠く西の地・岡山から東京百鬼夜行へとはるばるやってきた！可愛いものをたくさん集めて自分を最大限に可愛く魅せようとする、ちょっぴり狡くてあざとい性格。その愛くるしい見た目に惑わされていると、足元をすくわれちゃうかも？</div>
+        </div>
+      </div>
+      <div class="yomi-card">
+        <div class="yomi-photo yomi-photo-empty">写真準備中</div>
+        <div class="yomi-body">
+          <div class="yomi-name">きよっち</div>
+          <div class="yomi-meta">演：みちざね</div>
+          <div class="yomi-desc">妖怪と人間の狭間で翻弄され、己も他者を翻弄する、醜くも輝く妖。長野と宴の松原の鬼の伝承をかけ合わせ、伝承の前後を読み解き、自己解釈を重ねて生み出された。歴代ギャルの要素を散りばめた風貌と、意外と多いギャルと妖怪の接点に注目。</div>
+        </div>
+      </div>
+      <div class="yomi-card">
+        <div class="yomi-photo yomi-photo-empty">写真準備中</div>
+        <div class="yomi-body">
+          <div class="yomi-name">牛鬼</div>
+          <div class="yomi-kana">うしおに</div>
+          <div class="yomi-desc">顔は鬼または牛。身体は牛または蜘蛛のようなもの。人を食い殺してただ腹を満たし、ただ腹を満たすために人を殺す。感情の欠如、特に意味も目的もなくただ行雲流水に生きているだけ。人を殺す牛鬼も、悪霊を払う牛鬼も全てただの気まぐれの紙一重。思うがままに、生きているだけ。</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1600,7 +1722,7 @@
 
 <script>
   (function () {
-    var links = Array.prototype.slice.call(document.querySelectorAll('.gallery-item, .shop-photo'));
+    var links = Array.prototype.slice.call(document.querySelectorAll('.gallery-item, .shop-photo, .yomi-photo[href]'));
     var box = document.getElementById('lightbox');
     if (!links.length || !box || !box.showModal) return;
     var img = box.querySelector('.lightbox-img');
@@ -1614,7 +1736,7 @@
     links.forEach(function (a) {
       a.addEventListener('click', function (e) {
         e.preventDefault();
-        items = Array.prototype.slice.call(a.parentElement.querySelectorAll('.gallery-item, .shop-photo'));
+        items = Array.prototype.slice.call(a.parentElement.querySelectorAll('.gallery-item, .shop-photo, .yomi-photo[href]'));
         show(items.indexOf(a));
         box.showModal();
       });
