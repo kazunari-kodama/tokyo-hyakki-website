@@ -371,28 +371,8 @@
   }
   .smap-lead strong { color: #fef3d4; font-weight: 500; }
   .smap { max-width: 640px; margin: 0 auto; }
-  .smap > input { position: absolute; opacity: 0; pointer-events: none; }
-  .smap-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 10px; }
-  .smap-tabs label {
-    padding: 10px 6px;
-    text-align: center;
-    font-size: 14px;
-    letter-spacing: 0.15em;
-    color: #c89858;
-    border: 0.5px solid #5a3a1a;
-    cursor: pointer;
-  }
-  .smap-tabs small { display: block; font-size: 10px; letter-spacing: 0.1em; margin-top: 2px; }
-  #smap-tab-n:checked ~ .smap-tabs label[for="smap-tab-n"],
-  #smap-tab-s:checked ~ .smap-tabs label[for="smap-tab-s"] {
-    color: #1a0606;
-    background: #e8a83a;
-    border-color: #e8a83a;
-  }
-  #smap-tab-n:focus-visible ~ .smap-tabs label[for="smap-tab-n"],
-  #smap-tab-s:focus-visible ~ .smap-tabs label[for="smap-tab-s"] { outline: 2px solid #fef3d4; outline-offset: 2px; }
   .smap-area {
-    display: none;
+    display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 22px;
     position: relative;
@@ -400,8 +380,6 @@
     background: #0d0606;
     border: 0.5px solid #3a1818;
   }
-  #smap-tab-n:checked ~ .smap-area-n,
-  #smap-tab-s:checked ~ .smap-area-s { display: grid; }
   .smap-area::before {
     content: "";
     position: absolute;
@@ -411,7 +389,23 @@
     background: repeating-linear-gradient(to bottom, #e8a83a 0 8px, transparent 8px 14px);
     opacity: 0.5;
   }
-  .smap-end, .smap-side, .smap-alley, .smap-src { grid-column: 1 / -1; position: relative; }
+  .smap-end, .smap-side, .smap-alley, .smap-cross { grid-column: 1 / -1; position: relative; }
+  .smap-cross {
+    margin: 10px 0;
+    padding: 14px 8px;
+    text-align: center;
+    background: #2a1a10;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-image: repeating-linear-gradient(to right, #8a6a3a 0 10px, transparent 10px 18px) 6;
+  }
+  .smap-cross span {
+    padding: 4px 12px;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    color: #fef3d4;
+    background: #2a1a10;
+  }
   .smap-end {
     padding: 10px 8px;
     text-align: center;
@@ -420,7 +414,6 @@
     color: #fef3d4;
     background: #1a0a0a;
   }
-  .smap-end-next { color: #c89858; font-size: 11px; background: none; }
   .smap-side {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -454,7 +447,6 @@
   .smap-shop.smap-wc small { color: #3a1818; }
   .smap-wc-mark { margin-right: 4px; font-weight: normal; }
   .smap-src {
-    display: block;
     padding: 10px 8px 6px;
     text-align: center;
     font-size: 11px;
@@ -1362,13 +1354,7 @@
     <div class="sub-heading" id="shopmap">妖怪歓迎店舗マップ</div>
     <p class="smap-lead">ルック商店街のお店は妖怪大歓迎。<br><span class="smap-wc-mark">🚻</span>印の<strong>ルック商店街事務所</strong>と<strong>和楽器BAR 龍宮</strong>ではトイレをご利用いただけます。</p>
     <div class="smap">
-      <input type="radio" name="smap-area" id="smap-tab-n" checked>
-      <input type="radio" name="smap-area" id="smap-tab-s">
-      <div class="smap-tabs">
-        <label for="smap-tab-n">北エリア<small>高円寺駅側</small></label>
-        <label for="smap-tab-s">南エリア<small>青梅街道側</small></label>
-      </div>
-      <div class="smap-area smap-area-n">
+      <div class="smap-area">
         <div class="smap-end">JR高円寺駅（フィナーレ会場へ）</div>
         <div class="smap-side"><span>西側</span><span>東側</span></div>
         <div class="smap-w"><span class="smap-shop">TOKYO GLASS COMPANY<small>眼鏡</small></span></div><div class="smap-e"><span class="smap-shop">理容ノグチ<small>理髪店</small></span></div>
@@ -1435,12 +1421,7 @@
         <div class="smap-w"></div><div class="smap-e"><span class="smap-shop">態々<small>古着</small></span></div>
         <div class="smap-alley" aria-hidden="true"></div>
         <div class="smap-w"><span class="smap-shop">フヂヤ薬局<small>薬局</small></span></div><div class="smap-e"><span class="smap-shop">cell-bus<small>エステ</small></span></div>
-        <div class="smap-end smap-end-next">↓ 南エリアへ続く</div>
-        <a class="smap-src" href="static/images/map/north.png" target="_blank" rel="noopener">元の地図画像（北）を見る</a>
-      </div>
-      <div class="smap-area smap-area-s">
-        <div class="smap-end smap-end-next">↑ 北エリアへ続く</div>
-        <div class="smap-side"><span>西側</span><span>東側</span></div>
+        <div class="smap-cross"><span>🚦 交差点（信号機） 🚦</span></div>
         <div class="smap-w"><span class="smap-shop">JOHN&#x27;S SPACE<small>レンタルスペース</small></span></div><div class="smap-e"></div>
         <div class="smap-w"><span class="smap-shop">iiiio<small>飲食店</small></span></div><div class="smap-e"><span class="smap-shop">七つ森<small>喫茶店</small></span></div>
         <div class="smap-w"><span class="smap-shop">チヨハチ<small>鉄板焼き</small></span></div><div class="smap-e"></div>
@@ -1490,8 +1471,8 @@
         <div class="smap-w"></div><div class="smap-e"><span class="smap-shop">Home Agent<small>不動産</small></span></div>
         <div class="smap-w"></div><div class="smap-e"><span class="smap-shop">マクドナルド<small>ファーストフード</small></span></div>
         <div class="smap-end">青梅街道・東京メトロ新高円寺駅（行列スタート側）</div>
-        <a class="smap-src" href="static/images/map/south.png" target="_blank" rel="noopener">元の地図画像（南）を見る</a>
       </div>
+      <p class="smap-src">元の地図画像：<a href="static/images/map/north.png" target="_blank" rel="noopener">北側</a>／<a href="static/images/map/south.png" target="_blank" rel="noopener">南側</a></p>
     </div>
   </div>
 </section>
